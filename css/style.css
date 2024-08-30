@@ -291,6 +291,7 @@ section {
     font-size: 1.3rem;
     font-weight: bold;
     color: var(--accent);
+    white-space: nowrap;
 }
 
 .overall-score {
@@ -511,6 +512,12 @@ section {
     border-radius: 5px;
     border: 1px solid rgba(99, 102, 241, 0.2);
     transition: all 0.3s;
+}
+
+.skill-tag.primary {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+    border-color: var(--primary-color);
+    font-weight: 600;
 }
 
 .skill-tag:hover {
