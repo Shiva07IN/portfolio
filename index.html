@@ -1,381 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Thakur | AI Developer & Automation Specialist</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Shivam Thakur — 18-year-old AI Developer, Automation Architect & Python specialist from India. Building intelligent systems with OpenAI, Claude & Gemini APIs."/>
+  <title>Shivam Thakur · AI Developer & Automation Architect</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Shivam Thakur</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- ===== NAV ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">shivam<span>.dev</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Timeline</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:Thakurshivam2025@outlook.com" class="nav-cta">Hire Me</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <canvas id="neural-canvas"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">🤖 Available for AI Projects</div>
+    <h1 class="hero-title">
+      <div class="name" data-text="Shivam Thakur">Shivam Thakur</div>
+      <div style="font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:400;color:var(--muted);margin-top:8px">
+        <span class="accent">AI</span> Developer &amp; Automation Architect
+      </div>
+    </h1>
+    <p class="hero-sub" id="typed-text"><span id="typed"></span><span class="typed-cursor">|</span></p>
+    <p class="hero-desc">18-year-old self-taught developer from India 🇮🇳 — building intelligent automation systems, AI-powered tools and agents using Python, OpenAI, Claude &amp; Gemini APIs.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="num" data-target="15">0</span>+
+        <span class="label">AI Projects</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num" data-target="95">0</span>%
+        <span class="label">JEE Percentile</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num" data-target="4">0</span>+
+        <span class="label">Years Coding</span>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+      <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <div class="section-label reveal">01 / About</div>
+    <h2 class="section-title reveal">Who I <span class="hl">Am</span></h2>
+    <div class="about-grid">
+      <div class="code-card reveal-left">
+        <div class="code-header">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="code-filename">shivam.py</span>
         </div>
-    </nav>
+        <div class="code-body">
+<pre><code><span class="code-kw">class</span> <span class="code-cl">ShivamThakur</span>:
+  name     = <span class="code-str">"Shivam Thakur"</span>
+  age      = <span class="code-num">18</span>
+  location = <span class="code-str">"India 🇮🇳"</span>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Shivam Thakur</span></h1>
-                <h2>AI Developer | Python | Automation | AI Integrations</h2>
-                <p>18-year-old developer with a strong background in mathematics and artificial intelligence.</p>
-                <p>I build AI-powered tools, automation systems, and intelligent applications using Python, APIs, and modern web technologies.</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <i class="fas fa-trophy"></i>
-                        <span>Top 10% IOQM</span>
-                    </div>
-                    <div class="stat">
-                        <i class="fas fa-project-diagram"></i>
-                        <span>15+ AI Projects</span>
-                    </div>
-                    <div class="stat">
-                        <i class="fas fa-code"></i>
-                        <span>Python Expert</span>
-                    </div>
-                </div>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
+  focus = [
+    <span class="code-str">"AI Automation Systems"</span>,
+    <span class="code-str">"Multi-Model AI Pipelines"</span>,
+    <span class="code-str">"Intelligent Bots &amp; Agents"</span>,
+    <span class="code-str">"SaaS &amp; AI Tool Building"</span>,
+  ]
+
+  stack = [
+    <span class="code-str">"Python"</span>, <span class="code-str">"OpenAI GPT-4o"</span>,
+    <span class="code-str">"Claude 3.5"</span>, <span class="code-str">"Gemini 1.5"</span>,
+    <span class="code-str">"LangChain"</span>, <span class="code-str">"FastAPI"</span>,
+  ]
+
+  <span class="code-kw">def</span> <span class="code-fn">say_hi</span>(<span class="code-kw">self</span>):
+    <span class="code-kw">print</span>(<span class="code-str">"Let's build AI together! 🤖"</span>)</code></pre>
         </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am an AI developer from India with a strong interest in mathematics, machine learning, and intelligent systems.</p>
-                    <p>My journey started with competitive mathematics, where I ranked in the top 10% in the Indian Olympiad Qualifier in Mathematics (IOQM). This mathematical curiosity gradually expanded into programming, artificial intelligence, and building practical software.</p>
-                    <p>I am a self-learner who started coding in 2022. While I don't have many certifications, I believe in learning by building real projects and solving practical problems.</p>
-                    <p>Since 2023, I have been developing projects involving AI APIs, automation systems, and web applications. I enjoy experimenting with new technologies and turning ideas into working tools.</p>
-                    <p>My long-term goal is to work on advanced artificial intelligence systems and contribute to research and real-world AI applications.</p>
-                </div>
-                <div class="about-highlights">
-                    <div class="highlight-card">
-                        <i class="fas fa-robot"></i>
-                        <h3>AI Automation</h3>
-                        <p>Eliminating repetitive work with intelligent systems</p>
-                    </div>
-                    <div class="highlight-card">
-                        <i class="fas fa-plug"></i>
-                        <h3>API Integration</h3>
-                        <p>Connecting AI models to real applications</p>
-                    </div>
-                    <div class="highlight-card">
-                        <i class="fas fa-tools"></i>
-                        <h3>Custom Tools</h3>
-                        <p>Building AI-powered dashboards and SaaS products</p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="about-right reveal-right">
+        <div class="about-text">
+          <p>I'm an <strong>AI developer and automation architect</strong> from India with a deep passion for mathematics and intelligent systems. My journey started with competitive math — qualifying in the <strong>top 10% of IOQM</strong> — and evolved into building real AI applications.</p>
+          <p>Since 2022, I've been self-learning and building projects that combine <strong>AI APIs, automation, and web technologies</strong>. I believe in learning by doing — every project teaches something new.</p>
+          <p>Currently exploring <strong>AI Agents, RAG pipelines, and multi-model architectures</strong>. I also had the opportunity to work as an <strong>AI Developer Intern at Google</strong>.</p>
         </div>
-    </section>
-
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-content">
-                <div class="education-card">
-                    <div class="education-header">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>Class 12 – PCMB</h3>
-                    </div>
-                    <p class="education-subtitle">Physics, Chemistry, Mathematics, Biology</p>
-                    <div class="grades-grid">
-                        <div class="grade-item">
-                            <span class="subject">Physics</span>
-                            <span class="score">86/100</span>
-                        </div>
-                        <div class="grade-item">
-                            <span class="subject">Chemistry</span>
-                            <span class="score">84/100</span>
-                        </div>
-                        <div class="grade-item">
-                            <span class="subject">Biology</span>
-                            <span class="score">79/100</span>
-                        </div>
-                        <div class="grade-item">
-                            <span class="subject">Mathematics</span>
-                            <span class="score">69/80</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="education-card">
-                    <div class="education-header">
-                        <i class="fas fa-school"></i>
-                        <h3>Class 10</h3>
-                    </div>
-                    <div class="overall-score">
-                        <span class="score-large">90.8%</span>
-                    </div>
-                </div>
-                <div class="education-card achievement">
-                    <div class="education-header">
-                        <i class="fas fa-book-reader"></i>
-                        <h3>Self-Learner</h3>
-                    </div>
-                    <p class="achievement-text">Learning and building since 2022. I believe in practical learning through real projects rather than certifications.</p>
-                </div>
-                <div class="education-card achievement">
-                    <div class="education-header">
-                        <i class="fas fa-trophy"></i>
-                        <h3>IOQM Achievement</h3>
-                    </div>
-                    <p class="achievement-text">Top 10% – Indian Olympiad Qualifier in Mathematics (IOQM)</p>
-                </div>
-                <div class="education-card achievement">
-                    <div class="education-header">
-                        <i class="fas fa-atom"></i>
-                        <h3>NSEP 2024</h3>
-                    </div>
-                    <p class="achievement-text">72 Marks – National Standard Examination in Physics</p>
-                </div>
-                <div class="education-card achievement">
-                    <div class="education-header">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>JEE Mains 2025</h3>
-                    </div>
-                    <p class="achievement-text">95.08 Percentile</p>
-                </div>
-                <div class="education-card achievement">
-                    <div class="education-header">
-                        <i class="fab fa-github"></i>
-                        <h3>GitHub Experience</h3>
-                    </div>
-                    <p class="achievement-text">4+ Years of Active Development</p>
-                </div>
-                <div class="education-card achievement">
-                    <div class="education-header">
-                        <i class="fab fa-google"></i>
-                        <h3>Google AI Developer</h3>
-                    </div>
-                    <p class="achievement-text">AI Developer Intern at Google</p>
-                </div>
-            </div>
+        <div class="stats-row">
+          <div class="stat-box reveal">
+            <div class="n" data-target="15">0</div>
+            <div class="l">Projects</div>
+          </div>
+          <div class="stat-box reveal">
+            <div class="n" data-target="4">0</div>
+            <div class="l">Years Exp</div>
+          </div>
+          <div class="stat-box reveal">
+            <div class="n" data-target="3">0</div>
+            <div class="l">AI Models</div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Services I Offer</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-comments"></i>
-                    <h3>AI Chatbots</h3>
-                    <p>Telegram, Discord, WhatsApp, Website bots</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email Automation</h3>
-                    <p>AI-powered reading, sorting, auto-replies</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Data Extraction</h3>
-                    <p>Automated scraping from PDFs, websites, documents</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-file-alt"></i>
-                    <h3>AI Content Tools</h3>
-                    <p>Generators, summarizers, analyzers</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Custom Dashboards</h3>
-                    <p>Analytics panels with AI integration</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-link"></i>
-                    <h3>API Integration</h3>
-                    <p>Connect AI models to your existing systems</p>
-                </div>
-            </div>
+<!-- ===== EDUCATION / TIMELINE ===== -->
+<section id="education">
+  <div class="container">
+    <div class="section-label reveal">02 / Timeline</div>
+    <h2 class="section-title reveal">Education &amp; <span class="hl">Achievements</span></h2>
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-tag">2026 · Internship</div>
+        <div class="tl-card">
+          <h3>🌐 Google AI Developer Intern</h3>
+          <p>Working as an AI Developer Intern at Google — building and deploying AI-powered applications using Google's AI stack.</p>
         </div>
-    </section>
+      </div>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <h3>Instagram AI Chatbot</h3>
-                    <p>AI-powered chatbot for Instagram automation and engagement</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">AI</span>
-                    </div>
-                    <a href="https://github.com/Shiva07IN/insta-ai-chatbot" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-file-signature"></i>
-                    </div>
-                    <h3>AI Affidavit Writer</h3>
-                    <p>Automated affidavit generation using AI for legal documents</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">AI</span>
-                    </div>
-                    <a href="https://github.com/Shiva07IN/Ai-affidavit-writer" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fab fa-telegram"></i>
-                    </div>
-                    <h3>AI Application Writer Bot</h3>
-                    <p>Telegram bot that helps write boring applications using AI</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Telegram</span>
-                        <span class="tech-tag">AI</span>
-                    </div>
-                    <a href="https://github.com/Shiva07IN/AI-Application-writer-Telegram-Bot" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-            <div class="github-cta">
-                <a href="https://github.com/Shiva07IN" target="_blank" class="btn btn-primary">
-                    <i class="fab fa-github"></i> View All Projects on GitHub
-                </a>
-            </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot" style="background:var(--violet);box-shadow:0 0 16px var(--violet)"></div>
+        <div class="tl-tag">2025 · Exam</div>
+        <div class="tl-card">
+          <h3>📊 JEE Mains 2025</h3>
+          <p>Achieved <span class="tl-highlight">95.08 Percentile</span> — a testament to a strong foundation in Mathematics, Physics, and Chemistry.</p>
         </div>
-    </section>
+      </div>
 
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming (Mainly Python)</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag primary">Python (Primary)</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Vibe Coder</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-lightbulb"></i> Core Strengths</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag primary">AI Workflow Design</span>
-                        <span class="skill-tag primary">System Architecture</span>
-                        <span class="skill-tag primary">Problem Structuring</span>
-                        <span class="skill-tag">Strategic Thinking</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> AI / ML</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AI API Integrations</span>
-                        <span class="skill-tag">OpenAI</span>
-                        <span class="skill-tag">Prompt Engineering</span>
-                        <span class="skill-tag">AI Automation</span>
-                        <span class="skill-tag">Data Processing</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git & GitHub</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">Google Colab</span>
-                        <span class="skill-tag">CI/CD</span>
-                    </div>
-                </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-tag">2024 · Olympiad</div>
+        <div class="tl-card">
+          <h3>⚛️ NSEP 2024</h3>
+          <p>Scored <span class="tl-highlight">72 Marks</span> in the National Standard Examination in Physics.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot" style="background:var(--violet);box-shadow:0 0 16px var(--violet)"></div>
+        <div class="tl-tag">2023 · Olympiad</div>
+        <div class="tl-card">
+          <h3>🏆 IOQM — Top 10%</h3>
+          <p>Ranked in the <span class="tl-highlight">top 10%</span> in the Indian Olympiad Qualifier in Mathematics — the spark that led to AI &amp; programming.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-tag">2023 · Education</div>
+        <div class="tl-card">
+          <h3>🎓 Class 12 — PCMB</h3>
+          <p>Physics, Chemistry, Mathematics &amp; Biology stream.</p>
+          <div class="grades">
+            <span class="grade-pill">Physics 86/100</span>
+            <span class="grade-pill">Chemistry 84/100</span>
+            <span class="grade-pill">Biology 79/100</span>
+            <span class="grade-pill">Maths 69/80</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot" style="background:var(--violet);box-shadow:0 0 16px var(--violet)"></div>
+        <div class="tl-tag">2022 · Self-Learning</div>
+        <div class="tl-card">
+          <h3>💻 Started Coding</h3>
+          <p>Began self-teaching Python, AI APIs, and web development. Built first automation project within 3 months.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-tag">2021 · Education</div>
+        <div class="tl-card">
+          <h3>📚 Class 10</h3>
+          <p>Graduated with <span class="tl-highlight">90.8%</span> overall score.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="container">
+    <div class="section-label reveal">03 / Services</div>
+    <h2 class="section-title reveal">What I <span class="hl">Build</span></h2>
+    <div class="services-grid">
+      <div class="svc-card reveal magnetic">
+        <div class="svc-icon">🤖</div>
+        <h3>AI Chatbots</h3>
+        <p>Telegram, Discord, WhatsApp &amp; website chatbots powered by GPT-4o, Claude or Gemini.</p>
+      </div>
+      <div class="svc-card reveal magnetic">
+        <div class="svc-icon">⚡</div>
+        <h3>Email Automation</h3>
+        <p>AI-powered email reading, classification, smart sorting &amp; auto-reply systems.</p>
+      </div>
+      <div class="svc-card reveal magnetic">
+        <div class="svc-icon">🔍</div>
+        <h3>Data Extraction</h3>
+        <p>Automated scraping from PDFs, websites &amp; documents with AI-based parsing.</p>
+      </div>
+      <div class="svc-card reveal magnetic">
+        <div class="svc-icon">✍️</div>
+        <h3>AI Content Tools</h3>
+        <p>Generators, summarizers, document writers &amp; intelligent content analyzers.</p>
+      </div>
+      <div class="svc-card reveal magnetic">
+        <div class="svc-icon">📊</div>
+        <h3>Custom Dashboards</h3>
+        <p>Analytics panels and SaaS products with AI insights built-in.</p>
+      </div>
+      <div class="svc-card reveal magnetic">
+        <div class="svc-icon">🔌</div>
+        <h3>API Integration</h3>
+        <p>Connecting OpenAI, Claude, Gemini &amp; any AI model into your existing systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label reveal">04 / Projects</div>
+    <h2 class="section-title reveal">Featured <span class="hl">Work</span></h2>
+    <div class="projects-grid">
+
+      <div class="proj-card reveal tilt-card">
+        <div class="proj-num">001</div>
+        <div class="proj-icon">📸</div>
+        <h3>Instagram AI Chatbot</h3>
+        <p>AI-powered chatbot for Instagram automation — intelligent engagement, DM replies &amp; analytics.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">OpenAI</span>
+          <span class="proj-tag">Automation</span>
+        </div>
+        <a href="https://github.com/Shiva07IN/insta-ai-chatbot" target="_blank" class="proj-link">
+          View on GitHub <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="proj-card reveal tilt-card">
+        <div class="proj-num">002</div>
+        <div class="proj-icon">📄</div>
+        <h3>AI Affidavit Writer</h3>
+        <p>Automated legal document generation — AI-powered affidavit creation from simple inputs.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Claude AI</span>
+          <span class="proj-tag">PDF Gen</span>
+        </div>
+        <a href="https://github.com/Shiva07IN/Ai-affidavit-writer" target="_blank" class="proj-link">
+          View on GitHub <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="proj-card reveal tilt-card">
+        <div class="proj-num">003</div>
+        <div class="proj-icon">✈️</div>
+        <h3>AI Application Writer Bot</h3>
+        <p>Telegram bot that writes formal applications &amp; letters using AI — eliminating tedious writing.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Telegram</span>
+          <span class="proj-tag">Gemini</span>
+        </div>
+        <a href="https://github.com/Shiva07IN/AI-Application-writer-Telegram-Bot" target="_blank" class="proj-link">
+          View on GitHub <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+    <div class="github-cta reveal">
+      <a href="https://github.com/Shiva07IN" target="_blank" class="btn btn-secondary">
+        <i class="fab fa-github"></i> View All Projects on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label reveal">05 / Skills</div>
+    <h2 class="section-title reveal">Tech &amp; <span class="hl">Stack</span></h2>
+    <div class="skills-wrap">
+      <div class="skill-group reveal">
+        <h3>🤖 AI Models &amp; Frameworks</h3>
+        <div class="tags">
+          <span class="tag ai">OpenAI GPT-4o</span>
+          <span class="tag ai">Claude 3.5</span>
+          <span class="tag ai">Gemini 1.5</span>
+          <span class="tag ai">LangChain</span>
+          <span class="tag ai">HuggingFace</span>
+          <span class="tag ai">Prompt Engineering</span>
+          <span class="tag ai">RAG</span>
+          <span class="tag ai">AI Agents</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3>💻 Languages</h3>
+        <div class="tags">
+          <span class="tag ai">Python (Primary)</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML / CSS</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3>🛠️ Tools &amp; Platforms</h3>
+        <div class="tags">
+          <span class="tag">FastAPI</span>
+          <span class="tag">Telegram Bot API</span>
+          <span class="tag">Selenium</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Git &amp; GitHub</span>
+          <span class="tag">Google Colab</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h3>⚡ Core Strengths</h3>
+        <div class="tags">
+          <span class="tag ai">AI Workflow Design</span>
+          <span class="tag ai">System Architecture</span>
+          <span class="tag ai">Problem Structuring</span>
+          <span class="tag">Strategic Thinking</span>
+          <span class="tag">Self-Learning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label reveal">06 / Contact</div>
+    <h2 class="section-title reveal">Let's <span class="hl">Connect</span></h2>
+    <div class="contact-wrap">
+      <div class="contact-left reveal-left">
+        <p class="contact-intro">Have an AI project idea? Want to automate something? I'm always open to interesting collaborations and opportunities.</p>
+        <div class="contact-items">
+          <div class="c-item">
+            <div class="c-icon"><i class="fas fa-envelope"></i></div>
+            <div class="c-text">
+              <h4>Email</h4>
+              <a href="mailto:Thakurshivam2025@outlook.com">Thakurshivam2025@outlook.com</a>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">Let's work together on your next AI project</p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:Thakurshivam2025@outlook.com">Thakurshivam2025@outlook.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/Shiva07IN" target="_blank">github.com/Shiva07IN</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-instagram"></i>
-                        <div>
-                            <h4>Instagram</h4>
-                            <a href="https://instagram.com/shivaam.thakurr" target="_blank">@shivaam.thakurr</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-youtube"></i>
-                        <div>
-                            <h4>YouTube</h4>
-                            <a href="https://youtube.com/@Shivamthakur-07in" target="_blank">@Shivamthakur-07in</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/Shiva07IN" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://instagram.com/shivaam.thakurr" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://youtube.com/@Shivamthakur-07in" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="mailto:Thakurshivam2025@outlook.com"><i class="fas fa-envelope"></i></a>
-                </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fab fa-github"></i></div>
+            <div class="c-text">
+              <h4>GitHub</h4>
+              <a href="https://github.com/Shiva07IN" target="_blank">github.com/Shiva07IN</a>
             </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fab fa-instagram"></i></div>
+            <div class="c-text">
+              <h4>Instagram</h4>
+              <a href="https://instagram.com/shivaam.thakurr" target="_blank">@shivaam.thakurr</a>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fab fa-youtube"></i></div>
+            <div class="c-text">
+              <h4>YouTube</h4>
+              <a href="https://youtube.com/@Shivamthakur-07in" target="_blank">@Shivamthakur-07in</a>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="contact-right reveal-right">
+        <h3>Send a Message</h3>
+        <form id="contact-form" onsubmit="handleForm(event)">
+          <div class="form-group">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" placeholder="Your name" required/>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email</label>
+            <input type="email" id="femail" placeholder="your@email.com" required/>
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" id="submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Shivam Thakur. All rights reserved.</p>
-            <p class="quote">"Clients don't buy skills. They buy problems solved."</p>
-        </div>
-    </footer>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">shivam<span>.dev</span></div>
+    <div class="social-row">
+      <a href="https://github.com/Shiva07IN" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/shivaam.thakurr" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@Shivamthakur-07in" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+      <a href="mailto:Thakurshivam2025@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Shivam Thakur · Built with ❤️ &amp; AI</div>
+  </div>
+</footer>
 
-    <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
