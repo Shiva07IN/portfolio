@@ -133,6 +133,36 @@ window.addEventListener('scroll', () => {
   else navbar.classList.remove('scrolled');
 });
 
+// ===== THEME TOGGLE =====
+const html = document.getElementById('html-root');
+const themeBtn = document.getElementById('theme-toggle');
+
+function getSystemTheme() {
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+}
+
+function applyTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  // Redraw canvas with correct colors
+  const isDark = theme === 'dark';
+  document.documentElement.style.setProperty('--canvas-color', isDark ? '0,212,255' : '0,153,204');
+}
+
+// Init: saved > system
+const saved = localStorage.getItem('theme');
+applyTheme(saved || getSystemTheme());
+
+themeBtn.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme') || getSystemTheme();
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+// Listen to system changes
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+  if (!localStorage.getItem('theme')) applyTheme(e.matches ? 'light' : 'dark');
+});
+
 // ===== HAMBURGER =====
 document.getElementById('hamburger').addEventListener('click', () => {
   const nl = document.querySelector('.nav-links');
@@ -312,6 +342,21 @@ window.addEventListener('scroll', () => {
     if (heroGlow) heroGlow.style.transform = `translate(-50%,-50%) scale(${1 + window.scrollY * 0.0005})`;
   }
 });
+
+// ===== FLOATING CODE PARTICLES =====
+const codeSnippets = ['const ai =','import openai','def train():','await llm.run','model.predict','<neural />','{ mind: true }','=> intelligence','python -m ai','llm.chat([...])'];
+function spawnParticle() {
+  const el = document.createElement('span');
+  el.className = 'code-float';
+  el.textContent = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+  el.style.left = Math.random() * 100 + 'vw';
+  el.style.animationDuration = (6 + Math.random() * 6) + 's';
+  el.style.animationDelay = Math.random() * 2 + 's';
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 12000);
+}
+setInterval(spawnParticle, 3000);
+spawnParticle();
 
 console.log('%c🤖 Shivam Thakur | AI Developer', 'color:#00d4ff;font-size:16px;font-weight:bold;font-family:monospace');
 console.log('%chttps://github.com/Shiva07IN', 'color:#7c3aed;font-family:monospace');
